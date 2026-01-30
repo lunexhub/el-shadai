@@ -95,7 +95,7 @@ This project is configured for easy deployment on Vercel:
    The `vercel.json` file is already configured with:
    - Build command: `npm run build`
    - Output directory: `dist`
-   - SPA routing rewrites
+   - SPA routing rewrites: All routes (like `/services`, `/contact`) are automatically rewritten to `/index.html`, enabling shareable deep links. Static assets are served directly without rewriting.
 
 3. **Environment Variables** (if needed)
    - Add any environment variables in Vercel dashboard
@@ -124,10 +124,19 @@ The project uses Vite for building. The build output is optimized and minified f
 
 ### Large Media Files
 
-The project includes a video file in `src/assets/`. For production, consider:
+The project includes a video file (`WhatsApp Video 2026-01-24 at 15.25.38.mp4`) in `src/assets/` that is approximately 9.6MB. For production, consider:
 - Using a CDN (e.g., Cloudinary, AWS S3) for large media files
-- Optimizing video files before committing
+- Optimizing video files before committing (compression, lower resolution)
 - Using video hosting services (YouTube, Vimeo) and embedding
+- The video is currently included in the build but uses lazy loading and metadata preload to minimize initial load impact
+
+### Favicon
+
+The project includes a favicon setup using the logo image. The favicon is configured in `index.html` and uses the logo from the `public` folder. For production, consider:
+
+- Creating optimized favicon files (favicon.ico, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png)
+- Using online tools like [Favicon Generator](https://realfavicongenerator.net/) to generate all required sizes
+- The current setup uses `/favicon-temp.jpeg` as a temporary solution
 
 ### Environment Variables
 
