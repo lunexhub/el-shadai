@@ -137,3 +137,37 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# build
+dist
+dist-ssr
+.vite
+
+# Editors
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# vercel
+.vercel
+
+# Large media files (consider using CDN for production)
+# Note: Existing video files may already be tracked
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+# Keep images but exclude very large ones if needed
+# *.jpg
+# *.jpeg
+# *.png
