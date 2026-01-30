@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { ArrowRight, Baby, Heart, Shield, Users, Star, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { scrollToElement } from "@/lib/utils";
@@ -6,9 +7,12 @@ import heroImage from "@/assets/hero-image.jpg";
 import motherBaby from "@/assets/mother-baby.jpg";
 import babyFeet from "@/assets/baby-feet.jpg";
 import antenatalCare from "@/assets/antenatal-care.jpg";
-import premisesVideo from "@/assets/WhatsApp Video 2026-01-24 at 15.25.38.mp4";
 
 const Index = () => {
+  // Video is excluded from git (.gitignore), so we show a placeholder instead
+  // If you want to include the video, remove *.mp4 from .gitignore and commit the file
+  const [showVideo] = useState(false); // Set to true if video is available
+
   const services = [
     {
       icon: Baby,
@@ -199,18 +203,34 @@ const Index = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
-              <video
-                src={premisesVideo}
-                controls
-                className="w-full h-auto"
-                style={{ maxHeight: "600px" }}
-                playsInline
-                preload="metadata"
-                loading="lazy"
-                aria-label="Video tour of El Shadai Adonai Maternity Services premises"
-              >
-                Your browser does not support the video tag.
-              </video>
+              {showVideo ? (
+                <video
+                  src="/assets/WhatsApp Video 2026-01-24 at 15.25.38.mp4"
+                  controls
+                  className="w-full h-auto"
+                  style={{ maxHeight: "600px" }}
+                  playsInline
+                  preload="metadata"
+                  loading="lazy"
+                  aria-label="Video tour of El Shadai Adonai Maternity Services premises"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className="w-full h-[400px] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center rounded-2xl">
+                  <div className="text-center p-8">
+                    <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Heart className="w-10 h-10 text-primary" />
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
+                      Welcome to Our Premises
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Visit us at 18 Taaibos Street, Leondale, Germiston to see our modern facilities
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
