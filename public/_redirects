@@ -1,0 +1,22 @@
+# Netlify redirects file (for Netlify hosting compatibility)
+# This ensures SPA routing works on Netlify
+# Static assets should be served directly
+/assets/*  /assets/:splat  200
+/*.js      /:splat.js       200
+/*.css     /:splat.css      200
+/*.ico     /:splat.ico      200
+/*.png     /:splat.png      200
+/*.jpg     /:splat.jpg      200
+/*.jpeg    /:splat.jpeg     200
+/*.svg     /:splat.svg      200
+/*.webp    /:splat.webp     200
+/*.woff    /:splat.woff     200
+/*.woff2   /:splat.woff2    200
+/*.ttf     /:splat.ttf      200
+/*.json    /:splat.json     200
+/*.xml     /:splat.xml      200
+/*.txt     /:splat.txt      200
+/*.webmanifest /:splat.webmanifest 200
+# All other routes should serve index.html for SPA routing
+/*         /index.html       200
+

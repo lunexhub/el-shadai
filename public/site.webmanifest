@@ -1,0 +1,17 @@
+{
+  "name": "El Shadai Adonai Maternity Services",
+  "short_name": "El Shadai Adonai",
+  "description": "Comprehensive maternity care services",
+  "icons": [
+    {
+      "src": "/favicon-temp.jpeg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#f4a261",
+  "background_color": "#fff5f0",
+  "display": "standalone",
+  "start_url": "/"
+}
+
