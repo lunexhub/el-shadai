@@ -112,7 +112,7 @@ const Index = () => {
             {/* Video Content */}
             <div className="relative rounded-2xl overflow-hidden shadow-elevated animate-slide-up" style={{ animationDelay: "0.3s" }}>
               <video
-                src="https://res.cloudinary.com/dctg16g9q/video/upload/v1770267529/WhatsApp_Video_2026-02-03_at_22.21.29_z249xr.mp4"
+                src="https://res.cloudinary.com/dctg16g9q/video/upload/v1769803904/WhatsApp_Video_2026-01-24_at_15.25.38_njham4.mp4"
                 controls
                 className="w-full h-auto"
                 style={{ maxHeight: "600px" }}
@@ -218,11 +218,11 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               {showVideo ? (
                 <video
-                  src="https://res.cloudinary.com/dctg16g9q/video/upload/v1769803904/WhatsApp_Video_2026-01-24_at_15.25.38_njham4.mp4"
+                  src="https://res.cloudinary.com/dctg16g9q/video/upload/v1770267529/WhatsApp_Video_2026-02-03_at_22.21.29_z249xr.mp4"
                   controls
                   className="w-full h-auto"
                   style={{ maxHeight: "600px" }}
